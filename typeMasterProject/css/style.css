@@ -2,7 +2,7 @@
 
 html {
     box-sizing: border-box;
-    margin: 20px 50px;
+    margin: 20px;
 
 }
 
@@ -47,6 +47,10 @@ button a {
     color: #162542; 
 }
 
+header {
+    padding-bottom: 30px;
+}
+
 .header-button:hover a {
     color: #E8EFF2;
 }
@@ -57,7 +61,9 @@ button a {
 }
 
 .header-button {
-    float: right; 
+
+    position: absolute;
+    right: 0;
 }
 
 .topdiv-button {
@@ -76,92 +82,106 @@ button a {
     cursor: pointer;
 }
 
-.top-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    padding: 50px 0;
-    clear: both;
-}
-
 .top-div img {
-    border-radius: 10px;
-    width: 600px;
+    width: 400px;
     height: auto;
-   
+    border-radius: 15px; 
 }
-
 
 .flex {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    padding: 30px 0;
     
 }
 
+.topdiv-text {
+    padding-bottom: 30px;
+}
+
 .flex p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .middle-div {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr;
     column-gap: 20px;
+    padding-top: 40px;
 }
 
-.middle-div img:first-child {
-    width: auto;
-    height: 480px;
+.grid-1 {
+    width: 150px;
+    height: 240px;
     border-radius: 10px;
-    /* filter: grayscale(100%) invert(1) hue-rotate(290deg); */
+    background-image: url("../assets/desktop/image-phone-and-keyboard.jpg");
+    background-size: cover;
+    background-color: #F16718;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
 }
 
-.middle-div img:nth-child(2) {
+.grid-2 img {
     width: auto;
-    height: 480px;
-    border-radius: 10px;
-    
+    height: 240px;
+    border-radius: 10px;    
 }
-.middle-div div {
-    padding: 30px 80px;
+.grid-3 {
+    grid-column: span 3;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.grid-3 h2 {
+    text-align: center;
+    padding: 0 50px;
+}
+
+.grid-3 p {
+    text-align: center;
 }
 
 .bottom-div {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:40px;
-    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.bottom-div  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .bottom-div svg {
     background-color: #F16718;
     border-radius: 8px;
-    align-items: center;
     padding: 5px 10px;
     width: auto;
     height: auto;
 }
 
-.highly {
-    padding-top: 10px;
-    padding-right: 60px;
+.bottom-div h3 {
+    text-align: center;
+    padding: 0 70px;
 }
 
-.battery {
-    padding-top: 10px;
-    padding-right: 60px; 
-}
-
-.baklit {
-    padding-right: 60px;
+.bottom-div p {
+    text-align: center;
 }
 
 footer {
     font-size: 12px;
     display: flex;
-    justify-content: center;
-    padding-top: 20px;
+    justify-content: center; 
+    padding-top: 40px;
 }
 
 footer p:first-child {
@@ -169,3 +189,156 @@ footer p:first-child {
     padding-right: 3px;
 }
 
+
+@media only screen and (min-width: 481px){
+
+    .header-button {
+        float: right;
+    }
+
+    .top-div {
+        clear: both;
+    }
+
+    .top-div {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 20px;
+         padding-top: 20px;
+    }
+
+    .topdiv-text {
+        text-align: left;
+    }
+
+    .topdiv-text p {
+        padding-right: 20px;
+    }
+
+    .top-div img {
+        width: 480px;
+        height: auto;
+    }
+
+    .grid-1 {
+        width: 320px;
+        height: 480px;
+    }
+
+    .grid-2 img {
+        width: auto;
+        height: 480px;
+    }
+
+    .middle-div {
+        padding: 40px 0;
+    }
+
+
+.grid-3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.grid-3 h2 {
+    padding: 0;
+    text-align: left;
+}
+
+.grid-3 p {
+    text-align: left;
+    padding: 30px 40px 0;
+}
+
+    .bottom-div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .bottom-div div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .bottom-div h3 {
+        padding: 0;
+    }
+
+    .bottom-div p {
+        text-align: left;
+        padding: 0;
+    }
+
+}
+
+@media only screen and (min-width: 769px) {
+
+    .header-button {
+        position: absolute;
+        right: 25px;
+    }
+
+    .top-div img {
+        width: 700px;
+        height: auto;
+    }
+
+    .topdiv-text {
+        padding: 30px 0 0;
+    }
+
+    .topdiv-text p {
+        padding-right: 40px;
+    }
+
+    .flex {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .flex p {
+        padding-left: 30px;
+    }
+
+    .middle-div {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .grid-1 {
+        width: 320px;
+        height: 480px
+    }
+
+    .grid-3 {
+        display: flex;
+        flex-direction: column;
+        grid-column: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 50px 70px; 
+    }
+
+    .grid-3 h2 {
+        padding-right: 20px;
+    }
+
+    .grid-3 p {
+        text-align: left;
+        padding: 0;
+    }
+
+    .bottom-div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bottom-div h3 {
+        text-align: left;
+        padding-right: 80px;
+    }
+
+}
