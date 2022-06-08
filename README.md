@@ -1,5 +1,7 @@
 ### intro
-#### I'm Nana BLAY, i have always wanted to start a carrer in software development, thankfully __Amalitech Graduate Training__ came to my aid, Below is the first and foremost of my project. hoping to expand my collection of github projects. <br/>
+#### I'm Nana BLAY, i have always wanted to start a carrer in software development, thankfully __Amalitech Graduate Training__ came to my aid, Below is the first and foremost of my project. hoping to expand my collection of github projects. 
+##### _https://mblay.github.io/myProject1/_ 
+<br/>
 
 ##### reach me on linkedin let's connect via _https://www.linkedin.com/in/nana-blay-5n1a5n6a/_
 
