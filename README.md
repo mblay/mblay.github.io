@@ -1,11 +1,9 @@
 
-__intro__
 
-__Type Master Pre-launch Website__
+#Type Master Pre-launch Website
+-----------------
 
-&nbsp
-
-_A single responsive mobile-first landing page build with HTML/CSS_
+##_A single responsive mobile-first landing page build with HTML/CSS_
 _to suite user needs._
 _The flex and grid CSS properties were utilize to ensure_
 _the responsiveness_
