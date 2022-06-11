@@ -175,6 +175,26 @@ header {
     margin-left: 40px;
 }
 
+.highly {
+    padding-left: 30px;
+}
+
+.bluetooth {
+    padding-left: 40px;
+}
+
+.battery {
+    padding-left: 40px;
+}
+
+.baklit {
+    padding-left: 35px;
+}
+
+.bottom-div p {
+    padding-bottom: 40px;
+}
+
 footer {
     font-size: 12px;
     display: flex;
