@@ -2,7 +2,7 @@
 
 body {
     box-sizing: border-box;
-    margin: 20px 0 0 20px;
+    margin: 20px;
     padding: 0;
 
 }
@@ -146,7 +146,7 @@ header {
 
 .grid-3 p {
     margin: 20px;
-    padding: 0 25px 0 20px;
+    padding: 0 20px 0 20px;
 }
 
 .bottom-div {
@@ -172,17 +172,17 @@ header {
     padding: 5px 10px;
     width: auto;
     height: auto;
-    margin-left: 70px;
+    margin-left: 50px;
 }
 
 .bottom-div h3 {
-   margin-left: 40px;
-    padding-left: 40px;
+   margin-left: 30px;
+    padding-left: 30px;
 }
 
 .bottom-div p {
     margin-left: 20px;
-    padding-left: 25px;
+    padding-left: 20px;
 }
 
 
@@ -294,7 +294,7 @@ footer p:first-child {
     .bottom-div h3 {
         margin-left: 0;
         padding-left: 0;
-        padding-right: 70px;
+        padding-right: 80px;
         margin-right: 80px;
      }
 
