@@ -146,7 +146,7 @@ header {
 
 .grid-3 p {
 
-    padding: 0 20px;
+    padding-right: 20px;
 }
 
 .bottom-div {
@@ -175,8 +175,20 @@ header {
     margin-left: 40px;
 }
 
-.bottom-div h3 {
+.highly {
+    padding: 0 70px;
+}
+
+.bluetooth {
+    padding: 0 40px;
+}
+
+.battery {
     padding: 0 60px;
+}
+
+.baklit {
+    padding: 0 70px;
 }
 
 .bottom-div p {
