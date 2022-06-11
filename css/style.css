@@ -181,8 +181,8 @@ header {
 }
 
 .bottom-div p {
-    margin-left: 20px;
-    padding-left: 20px;
+    margin: 0 10px;
+    padding: 0 10px 30px;
 }
 
 
