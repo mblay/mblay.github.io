@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html {
+body {
     box-sizing: border-box;
     margin: 20px;
+    padding: 0;
 
 }
 
 h1 {
     font-family: 'Barlow', sans-serif;
     font-size: 3.5em;
+    font-weight: 700;
     text-transform: uppercase;
     color: #162542;
 }
@@ -16,6 +18,7 @@ h1 {
 h2 {
     font-family: "Barlow", sans-serif;
     font-size: 2em;
+    font-weight: 700;
     text-transform: uppercase;
     color: #162542;
 }
@@ -23,6 +26,7 @@ h2 {
 h3 {
     font-family: "Barlow", sans-serif;
     font-size: 1.5em;
+    font-weight: 700;
     text-transform: uppercase;
     color: #162542;
 }
@@ -48,7 +52,9 @@ button a {
 }
 
 header {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
 }
 
 .header-button:hover a {
@@ -61,9 +67,8 @@ header {
 }
 
 .header-button {
-
     position: absolute;
-    right: 0;
+    left: 270px;
 }
 
 .topdiv-button {
@@ -82,16 +87,15 @@ header {
     cursor: pointer;
 }
 
-.top-div img {
-    width: 400px;
+.image-keyboard img {
+    width: 420px;
     height: auto;
-    border-radius: 15px; 
+    border-radius: 15px;
 }
-
 .flex {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 30px;
     padding: 30px 0;
     
 }
@@ -101,7 +105,7 @@ header {
 }
 
 .flex p {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -116,8 +120,8 @@ header {
 .grid-1 {
     width: 150px;
     height: 240px;
-    border-radius: 10px;
-    background-image: url("../assets/desktop/image-phone-and-keyboard.jpg");
+    border-radius: 15px;
+    background-image: url("../assets/mobile/image-phone-and-keyboard.jpg");
     background-size: cover;
     background-color: #F16718;
     background-blend-mode: multiply;
@@ -125,9 +129,9 @@ header {
 }
 
 .grid-2 img {
-    width: auto;
+    width: 250px;
     height: 240px;
-    border-radius: 10px;    
+    border-radius: 15px;    
 }
 .grid-3 {
     grid-column: span 3;
@@ -136,12 +140,13 @@ header {
 }
 
 .grid-3 h2 {
-    text-align: center;
-    padding: 0 50px;
+    margin: 0 40px;
+    padding: 0 30px;
 }
 
 .grid-3 p {
-    text-align: center;
+    margin: 20px;
+    padding: 0 25px 0 20px;
 }
 
 .bottom-div {
@@ -158,6 +163,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .bottom-div svg {
@@ -166,22 +172,26 @@ header {
     padding: 5px 10px;
     width: auto;
     height: auto;
+    margin-left: 70px;
 }
 
 .bottom-div h3 {
-    text-align: center;
-    padding: 0 70px;
+   margin-left: 40px;
+    padding-left: 40px;
 }
 
 .bottom-div p {
-    text-align: center;
+    margin-left: 20px;
+    padding-left: 25px;
 }
+
 
 footer {
     font-size: 12px;
     display: flex;
     justify-content: center; 
     padding-top: 40px;
+    margin-left: 30px;
 }
 
 footer p:first-child {
@@ -190,20 +200,17 @@ footer p:first-child {
 }
 
 
-@media only screen and (min-width: 481px){
-
+@media only screen and (min-width: 768px) {
+    
     .header-button {
-        float: right;
-    }
-
-    .top-div {
-        clear: both;
+        position: absolute;
+        left: 800px;
     }
 
     .top-div {
          display: grid;
          grid-template-columns: repeat(2, 1fr);
-         gap: 20px;
+         gap: 60px;
          padding-top: 20px;
     }
 
@@ -211,22 +218,39 @@ footer p:first-child {
         text-align: left;
     }
 
-    .topdiv-text p {
-        padding-right: 20px;
+    .image-keyboard img {
+        display: none;
     }
 
-    .top-div img {
-        width: 480px;
-        height: auto;
+    .image-keyboard {
+        min-width: 580px;
+        height: 480px;
+        background-image: url("../assets/tablet/image-keyboard.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+    }
+
+    .middle-div {
+        gap: 40px;
     }
 
     .grid-1 {
-        width: 320px;
+        background-image: url("../assets/tablet/image-phone-and-keyboard.jpg");
+        min-width: 320px;
         height: 480px;
     }
 
     .grid-2 img {
-        width: auto;
+        display: none;
+    }
+
+    .grid-2 {
+        background-image: url("../assets/tablet/image-glass-and-keyboard.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        min-width: 600px;
         height: 480px;
     }
 
@@ -235,54 +259,65 @@ footer p:first-child {
     }
 
 
-.grid-3 {
+    .grid-3 {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
+    align-items: center;
+    justify-content: center;
+    }
 
-.grid-3 h2 {
+    .grid-3 h2 {
     padding: 0;
+    margin: 0;
     text-align: left;
-}
+    }
 
-.grid-3 p {
+    .grid-3 p {
     text-align: left;
-    padding: 30px 40px 0;
-}
+    }
 
     .bottom-div {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        gap: 60px;
     }
 
     .bottom-div div {
         display: flex;
-        align-items: flex-start;
+        align-items: baseline;
         justify-content: flex-start;
-    }
-    .bottom-div h3 {
-        padding: 0;
+        text-align: left;
     }
 
-    .bottom-div p {
-        text-align: left;
-        padding: 0;
+    .bottom-div svg {
+        margin: 0;
+    }
+    .bottom-div h3 {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 70px;
+        margin-right: 80px;
+     }
+
+     .bottom-div p {
+        margin-left: 0;
+        padding-left: 0;
     }
 
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1200px) {
 
     .header-button {
         position: absolute;
-        right: 25px;
+        left: 1155px;
     }
 
-    .top-div img {
-        width: 700px;
-        height: auto;
+    .image-keyboard {
+        background-image: url("../assets/desktop/image-keyboard.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: auto;
+        height: 600px;
     }
 
     .topdiv-text {
@@ -306,11 +341,19 @@ footer p:first-child {
     .middle-div {
         display: grid;
         grid-template-columns: 1fr 2fr 2fr;
+        gap: 20px;
     }
 
     .grid-1 {
+        background-image: url("../assets/desktop/image-phone-and-keyboard.jpg");
         width: 320px;
-        height: 480px
+        height: 600px
+    }
+
+    .grid-2 {
+        width: 400px;
+        height: 600px;
+        background-image: url("../assets/desktop/image-glass-and-keyboard.jpg");
     }
 
     .grid-3 {
@@ -319,16 +362,17 @@ footer p:first-child {
         grid-column: auto;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 50px 70px; 
-    }
-
-    .grid-3 h2 {
-        padding-right: 20px;
+        row-gap: 30px;
+        margin-top: 80px;
+        margin-left: 20px;
+        padding-left: 20px;
     }
 
     .grid-3 p {
         text-align: left;
         padding: 0;
+        margin: 0;
+        line-height: 30px;
     }
 
     .bottom-div {
