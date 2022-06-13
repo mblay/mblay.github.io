@@ -1,10 +1,11 @@
+
+/* font used barlow */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-    box-sizing: border-box;
-    margin: 20px;
-    padding: 0;
 
+/* general content styling */
+* {
+    box-sizing: border-box;
 }
 
 h1 {
@@ -37,11 +38,19 @@ p {
     color: #7B8BAD;
 }
 
+header {
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
 button  {
+    font-size: 16px;
+    font-family: "Barlow", sans-serif;
     border: none;
     border-radius: 6px;
-    width: 150px;
-    height: 50px;
+    width: 175px;
+    height: 58px;
     background-color: #E8EFF2;
 }
 button a {
@@ -49,12 +58,6 @@ button a {
     text-transform: uppercase;
     font-weight: bold;
     color: #162542; 
-}
-
-header {
-    padding-bottom: 20px;
-    position: relative;
-    width: 100%;
 }
 
 .header-button:hover a {
@@ -68,7 +71,7 @@ header {
 
 .header-button {
     position: absolute;
-    left: 270px;
+    right: 0;
 }
 
 .topdiv-button {
@@ -88,17 +91,16 @@ header {
 }
 
 .image-keyboard img {
-    width: 420px;
-    height: auto;
+    width: 372px;
+    height: 331px;
     border-radius: 15px;
 }
 .flex {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
-    padding: 30px 0;
-    
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;    
 }
+
 
 .topdiv-text {
     padding-bottom: 30px;
@@ -110,27 +112,29 @@ header {
     text-transform: uppercase;
 }
 
+/* middle container styling  */
 .middle-div {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 20px;
-    padding-top: 40px;
+    column-gap: 5px;
+    padding: 20px 0;
 }
 
 .grid-1 {
-    width: 150px;
-    height: 240px;
+    width: 130px;
+    height: 193px;
     border-radius: 15px;
     background-image: url("../assets/mobile/image-phone-and-keyboard.jpg");
     background-size: cover;
     background-color: #F16718;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
+    margin-left: -30px;
 }
 
 .grid-2 img {
-    width: 250px;
-    height: 240px;
+    width: 220px;
+    height: 193px;
     border-radius: 15px;    
 }
 .grid-3 {
@@ -140,13 +144,8 @@ header {
 }
 
 .grid-3 h2 {
-    margin: 0 40px;
+    margin: 20px 40px 0;
     padding: 0 30px;
-}
-
-.grid-3 p {
-
-    padding-right: 20px;
 }
 
 .bottom-div {
@@ -155,52 +154,50 @@ header {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 20px;
+    margin-top: 50px;
 }
 
 .bottom-div  div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: center;
 }
 
-.bottom-div svg {
+.svg {
     background-color: #F16718;
-    border-radius: 8px;
-    padding: 5px 10px;
-    width: auto;
-    height: auto;
-    margin-left: 40px;
+    border-radius: 15px;
+    width: 65px;
+    height: 65px;
 }
 
 .highly {
-    padding-left: 30px;
+    width: 150px;
 }
 
 .bluetooth {
-    padding-left: 40px;
+    width: 200px;
 }
 
 .battery {
-    padding-left: 40px;
+    width: 200px;
 }
 
 .baklit {
-    padding-left: 35px;
+    width: 150px;
 }
 
 .bottom-div p {
-    padding-bottom: 40px;
+    margin: 10px 0 70px;
 }
 
 footer {
-    font-size: 12px;
+    font-size: 16px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    text-align: center;
     padding-top: 40px;
-    margin-left: 30px;
 }
 
 footer p:first-child {
@@ -208,23 +205,23 @@ footer p:first-child {
     padding-right: 3px;
 }
 
-
+/* styling for tablets view */
 @media only screen and (min-width: 768px) {
     
-    .header-button {
-        position: absolute;
-        left: 800px;
-    }
-
     .top-div {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         gap: 60px;
+         display: flex;
+         justify-content: flex-start;
+         gap: 20px;
          padding-top: 20px;
     }
 
     .topdiv-text {
-        text-align: left;
+        width: 540px;
+    }
+
+    .header-button {
+        position: absolute;
+        right: 10px;
     }
 
     .image-keyboard img {
@@ -232,22 +229,24 @@ footer p:first-child {
     }
 
     .image-keyboard {
-        min-width: 580px;
-        height: 480px;
+        width: 478px;
+        height: 425px;
         background-image: url("../assets/tablet/image-keyboard.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 15px;
+        margin-right: -10px;
     }
 
     .middle-div {
-        gap: 40px;
+        padding: 40px 0;
     }
 
     .grid-1 {
         background-image: url("../assets/tablet/image-phone-and-keyboard.jpg");
-        min-width: 320px;
-        height: 480px;
+        width: 214px;
+        height: 320px;
+        margin-left: 0;
     }
 
     .grid-2 img {
@@ -259,74 +258,77 @@ footer p:first-child {
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 15px;
-        min-width: 600px;
-        height: 480px;
+        width: 480px;
+        height: 320px;
     }
-
-    .middle-div {
-        padding: 40px 0;
-    }
-
 
     .grid-3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
+    text-align: left;
     }
 
     .grid-3 h2 {
     padding: 0;
     margin: 0;
-    text-align: left;
     }
 
     .grid-3 p {
-    text-align: left;
+        padding-left: 30px;
+        margin-left: 30px;
     }
 
     .bottom-div {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 60px;
+        gap: 20px;
     }
 
     .bottom-div div {
         display: flex;
         align-items: baseline;
-        justify-content: flex-start;
+        justify-content: center;
         text-align: left;
     }
 
-    .bottom-div svg {
-        margin: 0;
+    .svg {
+        padding: 0 18px;
     }
+
     .bottom-div h3 {
         margin-left: 0;
         padding-left: 0;
-        padding-right: 80px;
-        margin-right: 80px;
      }
-
-     .bottom-div p {
-        margin-left: 0;
-        padding-left: 0;
-    }
 
 }
 
+
+/* styling for desktop view */
+
 @media only screen and (min-width: 1200px) {
+
+    body {
+        margin: 20px 120px;
+    }
 
     .header-button {
         position: absolute;
-        left: 1155px;
+        right: 0;
+    }
+
+    .top-div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .image-keyboard {
         background-image: url("../assets/desktop/image-keyboard.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        width: auto;
-        height: 600px;
+        width: 540px;
+        height: 480px;
     }
 
     .topdiv-text {
@@ -349,19 +351,19 @@ footer p:first-child {
 
     .middle-div {
         display: grid;
-        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-columns: 1fr 2fr 1fr;
         gap: 20px;
     }
 
     .grid-1 {
         background-image: url("../assets/desktop/image-phone-and-keyboard.jpg");
-        width: 320px;
-        height: 600px
+        width: 255px;
+        height: 480px
     }
 
     .grid-2 {
-        width: 400px;
-        height: 600px;
+        width: 445px;
+        height: 480px;
         background-image: url("../assets/desktop/image-glass-and-keyboard.jpg");
     }
 
@@ -369,29 +371,48 @@ footer p:first-child {
         display: flex;
         flex-direction: column;
         grid-column: auto;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
         row-gap: 30px;
+        width: 255px;
+        height: 265px;
         margin-top: 80px;
-        margin-left: 20px;
-        padding-left: 20px;
     }
 
     .grid-3 p {
-        text-align: left;
         padding: 0;
         margin: 0;
-        line-height: 30px;
     }
 
     .bottom-div {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
     }
 
-    .bottom-div h3 {
-        text-align: left;
-        padding-right: 80px;
+
+    .left {
+        width: 255px;
+        height: 240px;
+        background-color: #e8effe;
+        position: absolute;
+        left: 0;
+        top: 865px;
+        border-radius: 15px;
+        margin-left: -150px;
+        z-index: -1;
+    }
+
+    .right {
+        width: 255px;
+        height: 240px;
+        background-color: #e8effe;
+        position: absolute;
+        right: 0;
+        top: 105px;
+        border-radius: 15px;
+        margin-right: -150px;
+        z-index: -1;
     }
 
 }
