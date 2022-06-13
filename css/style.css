@@ -40,7 +40,7 @@ p {
 
 header {
     width: 100%;
-    padding-bottom: 20px;
+    margin-top: 20px;
     position: relative;
 }
 
@@ -71,7 +71,7 @@ button a {
 
 .header-button {
     position: absolute;
-    right: 0;
+    right: 10px;
 }
 
 .topdiv-button {
@@ -89,6 +89,11 @@ button a {
     background-color: #FF9B62;
     cursor: pointer;
 }
+.topdiv-text {
+    width: 327px;
+    height: 286px;
+    margin-bottom: 100px;
+}
 
 .image-keyboard img {
     width: 372px;
@@ -98,12 +103,7 @@ button a {
 .flex {
     display: flex;
     justify-content: flex-start;
-    gap: 40px;    
-}
-
-
-.topdiv-text {
-    padding-bottom: 30px;
+    gap: 20px;    
 }
 
 .flex p {
@@ -212,7 +212,7 @@ footer p:first-child {
          display: flex;
          justify-content: flex-start;
          gap: 20px;
-         padding-top: 20px;
+         margin-top: 90px;
     }
 
     .topdiv-text {
@@ -387,17 +387,20 @@ footer p:first-child {
     .bottom-div {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 40px;
+        column-gap: 40px;
     }
 
-
+    .svg-bluetooth {
+        margin-top: 25px;
+    }
+   
     .left {
         width: 255px;
         height: 240px;
         background-color: #e8effe;
         position: absolute;
         left: 0;
-        top: 865px;
+        top: 915px;
         border-radius: 15px;
         margin-left: -150px;
         z-index: -1;
@@ -409,7 +412,7 @@ footer p:first-child {
         background-color: #e8effe;
         position: absolute;
         right: 0;
-        top: 105px;
+        top: 153px;
         border-radius: 15px;
         margin-right: -150px;
         z-index: -1;
