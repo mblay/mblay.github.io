@@ -11,7 +11,7 @@
 }
 
 body {
-    margin: 0 120px;
+    padding: 0 120px;
  }
 
 
@@ -199,6 +199,10 @@ button a {
     justify-content: center;
 }
 
+.bottom-div h3 {
+    padding: 30px 0;
+}
+
 .svg {
     background-color: #F16718;
     border-radius: 15px;
@@ -207,6 +211,10 @@ button a {
 }
 
 .highly, .baklit {
+    width: 200px;
+}
+
+.battery {
     width: 200px;
 }
 
@@ -227,11 +235,22 @@ footer p:first-child {
 @media only screen and (max-width: 768px){
 
     body {
-        margin: 0 0 10px 10px;
+        padding: 0 0 10px 10px;
     }
 
     header {
         width: 689px;
+    }
+
+    button {
+        width: 150px;
+        height: 48px;
+    }
+
+    .flex p {
+        width: 127px;
+        height: 48px;
+        padding: 10px 0;
     }
 
     .image-keyboard {
@@ -293,9 +312,20 @@ footer p:first-child {
     }
 }
 
+
+footer {
+    margin-top: 60px;
+}
+
 /* styling for mobile view */
 
-@media only screen and (max-width: 375px){
+@media only screen and (min-width: 320px) and (max-width: 480px){
+
+    body {
+        padding: 0 auto;
+    }
+
+
 
     html, body {
     overflow-x: hidden;
@@ -306,8 +336,8 @@ footer p:first-child {
 } 
 
     header {
-        width: 327px;
-        height: 48px;
+        max-width: 327px;
+        max-height: 48px;
     }
 
     .top-div {
@@ -319,8 +349,10 @@ footer p:first-child {
     }
 
     .topdiv-text {
-        width: 327px;
-        height: 286px;
+        width: 90%;
+        max-width: 327px;
+        max-height: 286px;
+        text-align: left;
     }
 
     .flex {
@@ -331,15 +363,14 @@ footer p:first-child {
         background-image: url("../assets/mobile/image-keyboard.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        width: 372px;
-        height: 331px;
+        max-width: 372px;
+        max-height: 331px;
         margin: 30px 0 10px;
     }
 
     .middle-div {
         display: grid;
         grid-template-columns: 129px 220px;
-        position: relative;
     }
 
     .grid-1 {
@@ -374,8 +405,8 @@ footer p:first-child {
     }
 
     .grid-3 p {
-        width: 327px;
-        height: 104px;
+        max-width: 327px;
+        max-height: 104px;
         margin: 0;
         padding: 0;
     }
@@ -401,12 +432,14 @@ footer p:first-child {
         height: 56px;
         padding: 0 60px;
         margin: 30px 0;
+        text-align: center;
     }
 
     .bottom-div p {
         width: 327px;
         height: 104px;
         margin: 0 0 30px;
+        text-align: center;
     }
 
     footer {
